@@ -39,6 +39,18 @@ Given the above points and previous experience with mkDocs, the mkdocs framework
 To keep things simple, the documentation will also be built using `main` branch and published to `github pages` and made available online at `danielfbm.github.io/microservices`. 
 
 
+### Linting and building
+
+To ensure the documentation build is always `green` the following validations are performed in CI:
+
+- Linting of markdown files
+- Building of the documentation site using validation flags
+
+### Deployment
+
+After `main` branch updates the documentation will be automatically built and deployed to `github pages` after the above linting and testing validations have passed.
+
+
 ## Tech Stack
 
 <!-- list of technologies used -->
@@ -59,10 +71,7 @@ The current change makes documentation using vanila markdown very straightforwar
 
 <!-- How test should be implemented to ensure quality of the feature -->
 
-To make sure the documentation is always working in the `main` branch, the following validations are performed in CI:
-
-- Linting of markdown files
-- Building of the documentation site using validation flags
+See [Linting and building](#linting-and-building) for more information.
 
 ## Security
 
@@ -76,3 +85,4 @@ The documentation is open and available online. There is no plan to create a dep
 
 - [5 Free Static Documentation Generators You Must Check Out. - DEV](https://dev.to/nafis/5-free-static-documentation-generators-you-must-check-out-5ged)
 - [Material for MkDocs - Material](https://squidfunk.github.io/mkdocs-material/)
+- [Publishing mkdocs to GitHub Pages](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)
