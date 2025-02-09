@@ -1,16 +1,14 @@
-
-
 .PHONY: docs-setup
-docs-setup: ##@Docs Setup environment for building and serving the documentation.
-	@if ! command -v python3 &> /dev/null
-		then echo "python3 could not be found. Please install it and try again."
-		exit 1
-		fi
-	@if ! command -v pip3 &> /dev/null
-		then echo "pip3 could not be found. Please install it and try again."
-		exit 1
-		fi
-	$(shell pip3 install -r requirements.txt)
+docs-setup: ##@Docs Setup environment for building and serving the documentation. It is recommended to use a virtual environment.
+	@if ! command -v python3 &> /dev/null; then \
+		echo "python3 could not be found. Please install it and try again."; \
+		exit 1; \
+	fi
+	@if ! command -v pip3 &> /dev/null; then \
+		echo "pip3 could not be found. Please install it and try again."; \
+		exit 1; \
+	fi
+	pip3 install -r requirements.txt
 
 .PHONY: docs
 docs: ##@Docs Build and serve docs locally. Needs mkdocs and python3.

@@ -2,7 +2,7 @@
 
 An demo implementation of hybrid microservices architecture following a set of principles and best practices.
 
-## Development and contribution 
+## Development and contribution
 
 Follow the [Contribution Guidelines](CONTRIBUTING.md) to understand how to contribute.
 
@@ -13,7 +13,7 @@ Follow the [Contribution Guidelines](CONTRIBUTING.md) to understand how to contr
 
 *Features:*
 
-- [ ] **Basic repo setup with docs**: Must have clear instructions on project roadmap, must have a working documentation page 
+- [x] **Basic repo setup with docs**: Must have clear instructions on project roadmap, must have a working documentation page
 automatically deployed to github pages, must have clear instructions on project development and delivery practices
 - [ ] **Basic infrastructure for monitoring, logging and tracing**: Must have working monitoring, logging and tracing
 services deployed to kubernetes with terraform
@@ -32,7 +32,7 @@ services deployed to kubernetes with terraform
 - [ ] **Payment Service**: Working Payment service with basic CRUD operations to create handle payment for user orders
 - [ ] **Web UI**: Working UI for API Gateway that allows to list and manage orders
 
-### 0.3 
+### 0.3
 
 *Features:*
 
