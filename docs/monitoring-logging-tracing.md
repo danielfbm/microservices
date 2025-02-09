@@ -72,6 +72,26 @@ A base general purpose dashbord will be created to visualize collected data from
 - Grafana for Visualization
 - Terraform for deployment
 
+### Available options
+
+1. [`Squareops terraform-kubernetes-grafana-stack`](https://github.com/squareops/terraform-kubernetes-grafana-stack): Given the monitoring goal, this would be a one-stop-shop fo almost all needs, missing only tracing that could be added later
+2. [`kube-prometheus`](https://github.com/prometheus-operator/kube-prometheus): A robust solution for monitoring give ready-to-use configurations for `Prometheus`, `Grafana`, `Alertmanager` etc. Tracing and logging are missing and needed to be sorted later.
+3. [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack): A helm chart for `kube-prometheus-stack` that can be used to deploy the monitoring stack in a kubernetes cluster.
+4. `Manual setup`: Gathering individual service charts/manifests and information individually for deploying and enabling each service in the cluster using their respective helm charts or manifests.:
+
+
+### Implementation
+
+One of the main goals of this project is induce learning and understanding of the tools and services used in the project. For this reason, the manual setup will be chosen to better understand the inner workings of each service and how they interact with each other.
+
+The order of implementation will be as follows:
+
+1. Prometheus deployment (chart/manifests)
+2. Grafana deployment (chart/manifests)
+3. Loki deployment (chart/manifests)
+4. Jaeger deployment (chart/manifests)
+5. Terraform abstraction for deployment
+
 
 ## Impact
 
@@ -103,5 +123,7 @@ Using local clusters like `docker desktop`, `orbstack` and `minikube` to deploy 
 - [Grafana mimir](https://grafana.com/oss/mimir/)
 - [Grafana tempo](https://grafana.com/oss/tempo/)
 - [Grafana loki](https://grafana.com/oss/loki/)
--
-- [](https://github.com/squareops/terraform-kubernetes-grafana-stack)
+- [terraform-kubernetes-grafana-stack](https://github.com/squareops/terraform-kubernetes-grafana-stack)
+- [Terraform](https://www.terraform.io/)
+- [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus)
+- [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
